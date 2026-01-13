@@ -21,4 +21,8 @@ app.get("/", (req, res) => {
  });
 });
 
+app.use("/api/users", userRoutes);
+app.use("/api/products", productRoutes);
+app.use("/api/comments", commentRoutes);
+
 app.listen(ENV.PORT, () => console.log("Server is running on PORT", ENV.PORT));
